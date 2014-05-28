@@ -1,0 +1,18 @@
+extends ../shared/template
+
+block content
+  h1 New Projects
+
+  form(action='/portfolio', method='post', enctype='multipart/form-data')
+    input(type='text', name='title', placeholder='Title')
+    textarea(name='description', placeholder='Description')
+    input(type='text', name='tags', placeholder='Tags')
+    input(type='text', name='git', placeholder='Git Url')
+    input(type='text', name='app', placeholder='App Url')
+    input(type='date', name='date')
+    input(type='file', name='photo', multiple=true)
+    a#add-photo(href='#') Add Photo
+    button Add Project
+
+block scripts
+  script(src='/js/es6/compiled/new-project.js')
