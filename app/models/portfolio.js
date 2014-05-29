@@ -19,6 +19,12 @@ class Portfolio{
       fn();
     });
   }
+
+  static findById(portId, fn){
+    portfolios.findOne(portId, (err, port)=>{
+      fn(port);
+    });
+  }
 }
 
 module.exports = Portfolio;
